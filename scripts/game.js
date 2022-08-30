@@ -2,7 +2,7 @@ const PAGE_WORD_COUNT = 10000
 
 export async function getAllWords(){
     let words;
-    await $.getJSON(`../dictionary/2.json`,((data) => {
+    await $.getJSON(`https://raw.githubusercontent.com/tscburak/wordGuess/main/dictionary/2.json`,((data) => {
         words=data;
     }));
     return words;
