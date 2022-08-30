@@ -11,7 +11,7 @@ export async function getAllWords(){
 export async function getRandWord(words, IDList){
     let word;
     do {
-        const randNumber = Math.floor(Math.random()*18348);
+        const randNumber = Math.floor(Math.random()*18350);
         const page = 2;
         word = words[randNumber];
         
