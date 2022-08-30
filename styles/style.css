@@ -1,0 +1,48 @@
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+
+}
+
+
+.scoreboard{
+  background-color: red;
+}
+.container{
+  display: block;
+  margin-top: 0em;
+}
+
+body{ height:100vh; margin:0; }
+
+header{ min-height:50px;}
+footer{ min-height:50px; }
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+footer{
+  margin-top:auto; 
+}
+
+
