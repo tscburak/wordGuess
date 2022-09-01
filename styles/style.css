@@ -44,6 +44,8 @@ body {
 }
 
 .textbox{
+  max-width: 500px;
+  width: 70vw;
   background-color: yellow;
   padding-bottom: 5vh;
   padding-top: 5vh;
@@ -70,6 +72,8 @@ header{ min-height:50px;}
 footer{ min-height:50px; }
 
 #questionarea{
+  max-width: 500px;
+  width: 70vw;
   border: 2px solid white;
   color: aliceblue;
   margin-bottom: 20px;
@@ -90,6 +94,9 @@ input[type="button"]{
 body{ 
   display:flex; 
   flex-direction:column; 
+}
+main{
+  width: 50px;
 }
 
 
