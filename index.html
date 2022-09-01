@@ -24,16 +24,21 @@
         </p>
       </div>
     </div>
-    <div>
-      <div class = "container textbox w-70">
-        <input type="text" class="text-center" id="answerbox"/>
+    <div class = "container w-10 overflow-auto" id = "questionarea">
+      <p class="lead" id = "question"></p>
+    </div>
+    <div class = "container textbox w-20 p-3">
+      <div>
+        <input type="text" class="text-center me-2" id="answerbox"/>
+        <input type="button" class = "text-center" id = "submitanswer" value="=>"/>
+      </div>
+      <div class="pt-3">
+        <input type="button" class = "text-center me-3" id = "askagain" value="New Question"/>
+        <input type="button" class = "text-center" id = "showanswer" value="Show the Answer"/>
       </div>
     </div>
     <br>
-    <p class="lead" id = "question"></p>
-    <input type="button" class = "text-center" id = "askagain" value="New Question"/>
-    <input type="button" class = "text-center" id = "showanswer" value="Show the Answer"/>
-    <input type="button" class = "text-center" id = "submitanswer" value="Submit"/>
+
     <p class="lead">
     </p>
 </main>
