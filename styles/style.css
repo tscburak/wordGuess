@@ -17,19 +17,51 @@
  */
 
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
 
 .scoreboard{
-  background-color: red;
+  background-color: yellow;
+  box-shadow: 1vh 1vh #212121;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 10vh;
+  border: 1px solid #212121;
+  border-radius: 1px;
+
 }
-.container{
-  display: block;
-  margin-top: 0em;
+#score{
+  margin: 0px;
+  font-size: 15vh;
+  height: 15vh;
+}
+#scoretext{
+  margin: 0;
+  font-size: 3vh;
+  height: 1vh;
 }
 
+.textbox{
+  background-color: #212121;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  width: 300px;
+  box-shadow: 1vh 1vh yellow;
+ 
+}
+input[type="text"]{
+  color: whitesmoke;
+  background-color: #212121;
+  border: 2px solid yellow;
+  border-radius: 6px;
+}::placeholder{
+  color: yellow;
+}
+input[type=""]:focus{
+ 
+}
 body{ height:100vh; margin:0; }
 
 header{ min-height:50px;}

@@ -43,8 +43,24 @@ function calcScore(word){
     return score;
 }
 
+function removeUnecessary(word){
+    let listCopy = word.anlamlarListe||[];
+    word.anlamlarListe = []
+    // let meanings = Object.values(listCopy).map((record) =>{return {order: record.anlam_sira,meaning: record.anlam}});
+    listCopy.forEach((element,index)=>{
+        
+        let elementWords = (element.meaning||"").toLocaleLowerCase().split(" ");
+
+        if(!elementWords.includes(word.madde.split(" ")[0]) && !(elementWords.includes("ihtimali") && elementWords.includes("veya") && elementWords.includes("imkânı") && elementWords.includes("bulunmak") )){
+            word.anlamlarListe.push({anlam_sira:index+1, anlam:element})
+        }
+    })
+    return word;
+}
+
 gts.every((element, index, array) => {
     if(element != null){ 
+       // element = removeUnecessary(element);
         if(element.madde.length>1 && (element.anlamlarListe || []).length > 1){
             count++;
             words = [...words,
@@ -57,6 +73,7 @@ gts.every((element, index, array) => {
                      })
                 }]
         }
+
         if (words.length == 20000){
             fs.writeFile(`./dictionary/${Math.floor(count/10000)}.json`, JSON.stringify(words), err => {
                 if (err) {
@@ -75,9 +92,7 @@ gts.every((element, index, array) => {
         }
         
     }
-
-    
-    return true;
+return true
 });
 
 
