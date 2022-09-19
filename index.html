@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <title>Word Guess</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <meta name="theme-color" content="#712cf9">
@@ -17,25 +17,16 @@
   <body>
     
 <main class="container text-center w-100 h-10 mw-50px m-auto">
-    <div class = "container scoreboard">
-      <div>
-        <p> <p id="scoretext">score</p>
-          <h1 id = "score">0</h1>
-        </p>
+    <div class = "container scoreboard d-flex flex-column">
+          <p class ="h4 m-0 pt-2 " id="scoretext">score</p>
+          <h1 class = "d inline-flex display-1 pe-1 ps-1" id = "score">0</h1>
       </div>
     </div>
-    <div class = "container overflow-auto" id = "questionarea">
-      <p class="lead" id = "question"></p>
+    <div class = "container overflow-auto text-start" id = "questionarea">
+      <p style="font-size: medium;" class="lead" id = "question"></p>
     </div>
-    <div class = "container textbox p-3">
-      <div>
-        <input type="text" class="text-center me-2" id="answerbox"/>
-        <input type="button" class = "text-center" id = "submitanswer" value="=>"/>
-      </div>
-      <div class="pt-3">
-        <input type="button" class = "text-center me-3" id = "askagain" value="New Question"/>
-        <input type="button" class = "text-center" id = "showanswer" value="Show the Answer"/>
-      </div>
+    <div class = "container textbox p-3" id = "bottombox">
+      <input style="font-size:25px ;" type="button" class = "text-center m-3" id = "start" value="Başla!"/>
     </div>
     <br>
 

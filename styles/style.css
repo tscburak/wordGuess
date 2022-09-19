@@ -1,47 +1,17 @@
-/*
- * Globals
- */
-
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-}
-
-
-/*
- * Base structure
- */
-
-body {
-
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-}
-
-
 .scoreboard{
   background-color: yellow;
   box-shadow: 1vh 1vh #212121;
-  width: fit-content;
-  height: fit-content;
+  max-width: 200px;
+  max-height: 200px;
+  min-height: 125px;
+  min-width: 75px;
+  width: 25vw;
+  height: 25vh 50vw;
   margin-bottom: 10vh;
   border: 1px solid #212121;
   border-radius: 1px;
+}
 
-}
-#score{
-  margin: 0px;
-  font-size: 15vh;
-  height: 15vh;
-}
-#scoretext{
-  margin: 0;
-  font-size: 3vh;
-  height: 1vh;
-}
 
 .textbox{
   max-width: 500px;
@@ -55,15 +25,18 @@ body {
 }
 
 input[type="text"]{
-  color: whitesmoke;
+  width: 50vw;
+  max-width: 400px;
+  color: 212121;
   background-color:yellow ;
   border: 2px solid #212121;
   border-radius: 6px;
 }::placeholder{
   color: #212121;
 }
-input[type="text"]{
-  color: #212121;
+input:focus[type="text"]{
+  
+  border-color: 2px solid white;
 }
 
 body{ height:100vh; margin:0; }
@@ -90,15 +63,18 @@ input[type="button"]{
   width: 30px;
   height: 30px;
 }
-/* Trick */
+
 body{ 
   display:flex; 
   flex-direction:column; 
 }
+
 main{
   width: 50px;
 }
 
-
+.oneline{
+display: block;
+}
 
 

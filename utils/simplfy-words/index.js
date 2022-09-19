@@ -51,7 +51,7 @@ function removeUnecessary(word){
         
         let elementWords = (element.meaning||"").toLocaleLowerCase().split(" ");
 
-        if(!elementWords.includes(word.madde.split(" ")[0]) && !(elementWords.includes("ihtimali") && elementWords.includes("veya") && elementWords.includes("imkânı") && elementWords.includes("bulunmak") )){
+        if(!elementWords.includes(word.madde.split(" ")[0]) && !elementWords){
             word.anlamlarListe.push({anlam_sira:index+1, anlam:element})
         }
     })
@@ -60,17 +60,20 @@ function removeUnecessary(word){
 
 gts.every((element, index, array) => {
     if(element != null){ 
+        let wordMeanings = Object.values(element.anlamlarListe||[]).map((record) =>{
+            return {order: record.anlam_sira,meaning: record.anlam}
+         })
        // element = removeUnecessary(element);
-        if(element.madde.length>1 && (element.anlamlarListe || []).length > 1){
+        if(element.madde.length>1 && (element.anlamlarListe || []).length > 1
+            && !wordMeanings.join(" ").toLocaleLowerCase().includes(element.madde.toLocaleLowerCase()) &&
+                !wordMeanings.join(" ").toLocaleLowerCase().includes("ihtimali veya imkânı bulunmak")){
             count++;
             words = [...words,
                 {
                     id: count,
                     word: element.madde,
                     score: calcScore(element.madde) ,
-                    meanings: Object.values(element.anlamlarListe).map((record) =>{
-                        return {order: record.anlam_sira,meaning: record.anlam}
-                     })
+                    meanings: wordMeanings
                 }]
         }
 
